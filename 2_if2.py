@@ -20,7 +20,28 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def lines(line1, line2):
+        if type(line1) == str and type(line2) == str:
+            if line1 == line2:
+                return 1
+            elif line1 != line2 and len(line1) > len(line2):
+                return 2
+            elif line1 != line2 and line2 == 'learn':
+                return 3     
+        else:
+            return 0
+
+    a = lines("Blabla", "Tem")
+    print(a)
+
+    b = lines(222, "222")    
+    print(b)
+
+    c = lines("222", "learn")
+    print(c)
+
+    d = lines("вывыв", "вывыв")
+    print(d)
     
 if __name__ == "__main__":
     main()

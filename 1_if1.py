@@ -19,7 +19,23 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    print("Пожалуйста, введите ваш возраст")
+    age = int(input("> "))
+
+    def way(age):
+        if 3 < age <=6:
+            return "Вам нужно в детский сад"
+        elif 7 <= age <= 18:
+            return "Вам нужно в школу"   
+        elif 19 <= age <= 24:
+            return "Вам нужно в универ"    
+        elif age > 24:
+            return "Пора бы и работу найти!"    
+        else:
+            return "Вы совсем молоды! Можете почиллить"
+
+    destiny = way(age)
+    print(destiny)
 
 if __name__ == "__main__":
     main()
